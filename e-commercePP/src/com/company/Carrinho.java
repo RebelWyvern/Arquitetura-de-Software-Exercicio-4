@@ -2,22 +2,20 @@ package com.company;
 
 import java.util.ArrayList;
 
-public class Carrinho {
-
+public class Carrinho{
+    private static Produto produto;
     private static Carrinho carrinho;
-    private static ArrayList <String> lista;//fazer uma lista do tipo Produto depois
-
+    private final ArrayList <CarrinhoInterface> observer;
 
  private Carrinho()
  {
-     lista=new ArrayList<String>();
-
+     observer=new ArrayList<CarrinhoInterface>();
  }
 
 
 
- public void adicionarNoCarrinho(String coisa){
-     lista.add(coisa);
+ public void adicionarNoCarrinho(CarrinhoInterface obs){
+     observer.add(obs);
 
  }
 
@@ -30,11 +28,17 @@ public class Carrinho {
  }
 
  public void mostrarLista(){
-     for(int i=0;i<lista.size();i++)
+     for(int i=0;i<observer.size();i++)
      {
-         System.out.println(lista.get(i));
+         System.out.println(observer.get(i));
      }
 
+ }
+
+ private void notifyObserver(){
+     for(CarrinhoInterface obs : observer){
+            obs.update(produto);
+     }
  }
 
 
