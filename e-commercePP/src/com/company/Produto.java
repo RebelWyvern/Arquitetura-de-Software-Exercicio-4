@@ -33,4 +33,8 @@ public class Produto implements CarrinhoInterface{
         setPreco(preco);
 
     }
+
+    public String toString(){
+        return "nome: "+ nome+"     preco: "+preco;
+    }
 }

@@ -9,6 +9,7 @@ public class Carrinho{
 
  private Carrinho()
  {
+     this.produto=produto;
      observer=new ArrayList<CarrinhoInterface>();
  }
 
@@ -28,11 +29,9 @@ public class Carrinho{
  }
 
  public void mostrarLista(){
-     for(int i=0;i<observer.size();i++)
-     {
-         System.out.println(observer.get(i));
-     }
-
+    for(CarrinhoInterface obs : observer){
+        System.out.println(obs);
+    }
  }
 
  private void notifyObserver(){
@@ -40,6 +39,7 @@ public class Carrinho{
             obs.update(produto);
      }
  }
+
 
 
 }
