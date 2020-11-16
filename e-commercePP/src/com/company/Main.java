@@ -15,7 +15,7 @@ public class Main {
         System.out.println("demonstracao do singleton funcionando: ");
         Carrinho carrinho2=Carrinho.getInstance();//agora nao sera permitido criar um segundo carrinho
 
-        carrinho2.toString();
+        carrinho2.mostrarLista();
 
 
 
