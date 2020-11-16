@@ -1,5 +1,6 @@
 package com.company;
 
+
 import java.net.PortUnreachableException;
 
 public class Main {
@@ -16,8 +17,6 @@ public class Main {
         Carrinho carrinho2=Carrinho.getInstance();//agora nao sera permitido criar um segundo carrinho
 
         carrinho2.mostrarLista();
-
-
-
+        carrinho2.metodoPagamento();
     }
 }

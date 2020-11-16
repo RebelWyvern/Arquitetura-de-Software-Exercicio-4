@@ -1,6 +1,7 @@
 package com.company;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Carrinho{
     private static Produto produto;
@@ -40,6 +41,13 @@ public class Carrinho{
      }
  }
 
+private void metodoPagamento(){
+    Pagamento pag = new Pagamento();
 
+    println("Escolha a forma de pagamento:");
+    println("1-Cartao , 2-Boleto , 3-PayPal");
+    Scanner teclado = new Scanner(System.in);
+    pag.criaPagamento(teclado);
+}
 
 }
