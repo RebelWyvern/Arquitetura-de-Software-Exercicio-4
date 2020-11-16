@@ -1,6 +1,6 @@
 package com.company;
 
-public class Boleto implements PagamentosemCartaoInterface{
+public class Boleto extends Pagamento implements PagamentosemCartaoInterface{
     private String nomeBeneficiario;
     private String nomePagador;
     private int data;

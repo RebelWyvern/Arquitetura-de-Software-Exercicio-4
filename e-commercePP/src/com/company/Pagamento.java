@@ -1,8 +1,8 @@
 package com.company;
 
-public class Pagamento implements MetodoPagamento {
+public class Pagamento {
  
-    @Override
+
     public Pagamento criaPagamento(int opcao) {
         System.out.println("Forma de pagamento Escolhida");
         if(opcao == 1){//cartao
@@ -16,6 +16,7 @@ public class Pagamento implements MetodoPagamento {
             System.out.println("PayPal-----------");
             return new PayPal();
         }
+        return null;
     }
 
 }

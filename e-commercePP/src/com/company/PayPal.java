@@ -1,6 +1,6 @@
 package com.company;
 
-public class PayPal implements PagamentosemCartaoInterface{
+public class PayPal extends Pagamento implements PagamentosemCartaoInterface{
     private String email;
     private String senha;
 

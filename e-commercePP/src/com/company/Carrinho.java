@@ -41,13 +41,14 @@ public class Carrinho{
      }
  }
 
-private void metodoPagamento(){
+public void metodoPagamento(){
     Pagamento pag = new Pagamento();
-
-    println("Escolha a forma de pagamento:");
-    println("1-Cartao , 2-Boleto , 3-PayPal");
     Scanner teclado = new Scanner(System.in);
-    pag.criaPagamento(teclado);
+    int aux=0;
+    System.out.println("Escolha a forma de pagamento:");
+    System.out.println("1-Cartao , 2-Boleto , 3-PayPal");
+    aux=teclado.nextInt();
+    pag.criaPagamento(aux);
 }
 
 }

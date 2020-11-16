@@ -1,5 +1,6 @@
 package com.company;
 
-public interface BoletoInterface {
-    void exibirInfo();
+public interface PagamentosemCartaoInterface {
+
+        void exibirInfo();
 }
